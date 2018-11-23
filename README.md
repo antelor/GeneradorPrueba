@@ -8,4 +8,3 @@
 Hosteado en:
 https://anteloregolo.herokuapp.com
 
-prueba coveralls
