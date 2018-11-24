@@ -6,6 +6,11 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 
 class PreguntaTest extends TestCase {
+    /**
+     * testGenerarPreg
+     *  Comprueba que se pueda crear un objeto pregunta
+     * @return void
+     */
     public function testGenerarPreg() {
         $pregs = Yaml::parseFile(dirname(__DIR__) . '/preguntas.yml');
 
@@ -13,6 +18,11 @@ class PreguntaTest extends TestCase {
         
         $this->assertTrue(isset($pregunta));   
     }
+    /**
+     * testeoDeLosGet
+     * Comprueba que se reciba algo cuando se piede que le devuelvan los datos del objeto pregunta
+     * @return void
+     */
     public function testeoDeLosGet(){
         $pregs = Yaml::parseFile(dirname(__DIR__) . '/preguntas.yml');
         $pregunta = new Pregunta($pregs['preguntas'][0], 1);
