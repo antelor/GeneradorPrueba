@@ -16,9 +16,10 @@ class PreguntaTest extends TestCase {
     public function testeoDeLosGet(){
         $pregs = Yaml::parseFile(dirname(__DIR__) . '/preguntas.yml');
         $pregunta = new Pregunta($pregs['preguntas'][0], 1);
-        //$this->assertTrue(null !== $pregs->getNumero());
-        $this->assertTrue(null !== $pregs->getDescripcion());
-        $this->assertTrue(null !== $pregs->getRespCorrectas());
-        $this->assertTrue(null !== $pregs->getRespIncorrectas());
+        $this->assertTrue(null !== $pregunta->getRespuestas());
+        $this->assertTrue(null !== $pregunta->getNumero());
+        $this->assertTrue(null !== $pregunta->getDescripcion());
+        $this->assertTrue(null !== $pregunta->getRespCorrectas());
+        $this->assertTrue(null !== $pregunta->getRespIncorrectas());
     }
 }
