@@ -16,6 +16,6 @@ class GeneradorTest extends TestCase {
     }
     public function testPreguntas() {
         $generador = new Generador(dirname(__DIR__) . '/preguntas.yml');
-        $this->assertTrue(null !== $generador->getPreguntas());
+        $this->assertTrue(null !== $generador->getPreguntas()); $this->assertTrue(null !== $generador->getPreguntas());
     }
 }
