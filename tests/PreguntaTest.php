@@ -17,6 +17,7 @@ class PreguntaTest extends TestCase {
         $pregs = Yaml::parseFile(dirname(__DIR__) . '/preguntas.yml');
         $pregunta = new Pregunta($pregs['preguntas'][0], 1);
         $this->assertTrue(null !== $pregunta->getRespuestas());
+        $this->assertTrue(null !== $pregunta->getCantRespuestas());
         $this->assertTrue(null !== $pregunta->getNumero());
         $this->assertTrue(null !== $pregunta->getDescripcion());
         $this->assertTrue(null !== $pregunta->getRespCorrectas());
